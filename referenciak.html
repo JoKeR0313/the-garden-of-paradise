@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Garden of Paradise referenciák - kertépítés, fenntartás, öntözőrendszer projektek galériája.">
+  <title>The Garden of Paradise | Referenciák</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-container">
+      <div class="logo">The Garden of Paradise</div>
+      <nav class="nav" id="nav">
+        <a href="index.html">Főoldal</a>
+        <a href="referenciak.html" class="active">Referenciák</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="index.html">Főoldal</a></li>
+        <li>Referenciák</li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <p class="eyebrow">Referenciák</p>
+        <h1>Kiválasztott munkáink</h1>
+        <p class="lede">Előtte-utána eredmények, kategorizált galéria és ügyfélvélemények.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">Összes</button>
+          <button class="filter-btn" data-filter="keptepes">Kertépítés</button>
+          <button class="filter-btn" data-filter="fenntartas">Kertfenntartás</button>
+          <button class="filter-btn" data-filter="ontozo">Öntözőrendszer</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery">
+          <div class="gallery-item card" data-category="keptepes">
+            <div class="gallery-image" data-image="images/0fc2ac20e39ccf6e6265401e7ef6ce58.jpg" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('images/0fc2ac20e39ccf6e6265401e7ef6ce58.jpg'); background-size: cover; background-position: center;">
+              <div class="badge">Kertépítés</div>
+              <div class="overlay">Előtte-utána slider</div>
+            </div>
+            <div class="gallery-body">
+              <h3>Hegyvidéki családi kert</h3>
+              <p>Teljes kertépítés, díszburkolat, gyep és automata öntözés.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item card" data-category="fenntartas">
+            <div class="gallery-image" data-image="images/sku6451606.jpg" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.12), rgba(0,0,0,0.32)), url('images/sku6451606.jpg'); background-size: cover; background-position: center;">
+              <div class="badge">Fenntartás</div>
+              <div class="overlay">Szezonális gondozás</div>
+            </div>
+            <div class="gallery-body">
+              <h3>Üzleti park ápolás</h3>
+              <p>Heti gyepápolás, sövény- és faápolás, tápanyag-utánpótlás.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item card" data-category="ontozo">
+            <div class="gallery-image" data-image="images/tropical-paradise-3.jpg" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.12), rgba(0,0,0,0.32)), url('images/tropical-paradise-3.jpg'); background-size: cover; background-position: center;">
+              <div class="badge">Öntözőrendszer</div>
+              <div class="overlay">Csepegtető és rotor</div>
+            </div>
+            <div class="gallery-body">
+              <h3>Automata öntözés</h3>
+              <p>Víztakarékos zónák tervezése, okos vezérlés és beüzemelés.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item card" data-category="keptepes">
+            <div class="gallery-image" data-image="images/flowers.jpg" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.12), rgba(0,0,0,0.32)), url('images/flowers.jpg'); background-size: cover; background-position: center;">
+              <div class="badge">Kertépítés</div>
+              <div class="overlay">Természetes hangulat</div>
+            </div>
+            <div class="gallery-body">
+              <h3>Modern-minimal előkert</h3>
+              <p>Évelők, fenyők, díszkavics és süllyesztett világítás.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Előtte-Utána</p>
+        <h2>Látványos átalakítások</h2>
+        <p class="lede">Húzd el a csúszkát, és lásd a változást!</p>
+        
+        <div style="margin-top: 24px; display: grid; gap: 24px;">
+          <div>
+            <h3 style="margin-bottom: 12px;">Hegyvidéki családi kert</h3>
+            <div class="before-after-slider" data-slider="1">
+              <img src="images/sku6451606.jpg" alt="Előtte" class="before-image" loading="lazy">
+              <img src="images/0fc2ac20e39ccf6e6265401e7ef6ce58.jpg" alt="Utána" class="after-image" loading="lazy">
+              <div class="slider-handle"></div>
+              <div class="before-after-labels">
+                <span>Előtte</span>
+                <span>Utána</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="margin-bottom: 12px;">Tropic paradise kert</h3>
+            <div class="before-after-slider" data-slider="2">
+              <img src="images/tropical-paradise-3.jpg" alt="Előtte" class="before-image" loading="lazy">
+              <img src="images/flowers.jpg" alt="Utána" class="after-image" loading="lazy">
+              <div class="slider-handle"></div>
+              <div class="before-after-labels">
+                <span>Előtte</span>
+                <span>Utána</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <p class="eyebrow">Ügyfelek mondták</p>
+        <h2>Valódi visszajelzések</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial card">
+            <div class="stars">★★★★★</div>
+            <p>„Precíz, gyors és nagyon szép munkát végeztek. Az öntözőrendszer hibátlanul működik.”</p>
+            <div class="author">Katalin, Buda</div>
+          </div>
+          <div class="testimonial card">
+            <div class="stars">★★★★★</div>
+            <p>„A heti fenntartásnak köszönhetően a kertünk egész évben rendezett. Ajánlom őket.”</p>
+            <div class="author">Balázs, Üzleti park</div>
+          </div>
+          <div class="testimonial card">
+            <div class="stars">★★★★☆</div>
+            <p>„A tervezéstől az átadásig végig segítőkészek voltak, minden kérdésre válaszoltak.”</p>
+            <div class="author">Dóra, Törökbálint</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére">↑</button>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">The Garden of Paradise</div>
+        <p>Teljes körű kertészeti megoldások Budapesten és környékén.</p>
+      </div>
+      <div>
+        <h4>Elérhetőségek</h4>
+        <ul class="footer-list">
+          <li>Rácz Kristóf — <a href="tel:+36202890919">06-20-289-0919</a></li>
+          <li>Dömötör Miklós — <a href="tel:+36302051747">06-30-205-1747</a></li>
+          <li><a href="mailto:gardenofparadise2026@gmail.com">gardenofparadise2026@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigáció</h4>
+        <ul class="footer-list">
+          <li><a href="index.html">Főoldal</a></li>
+          <li><a href="referenciak.html">Referenciák</a></li>
+          <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Garden Paradise. Minden jog fenntartva.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
