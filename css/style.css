@@ -261,6 +261,7 @@ img {
 .cta h2,
 .page-hero h1,
 .testimonials h2,
+.faq h2,
 .contact-section h2 {
   margin: 10px 0 14px;
   font-family: "Montserrat", Arial, sans-serif;
@@ -655,7 +656,59 @@ img {
   color: #666;
 }
 
-/* Back to Top Button */
+/* FAQ Section */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  padding: 20px 24px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--green-primary);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item summary h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.faq-item p {
+  margin: 12px 0 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+
 .back-to-top {
   position: fixed;
   bottom: 30px;
