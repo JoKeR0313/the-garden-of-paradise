@@ -608,6 +608,21 @@ img {
   right: 10px;
 }
 
+#lightboxCaption {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+#lightboxCaption .lightbox-desc {
+  display: block;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 3px;
+}
+
 .gallery-swipe-hint {
   text-align: center;
   color: #666;

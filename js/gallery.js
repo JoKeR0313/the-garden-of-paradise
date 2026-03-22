@@ -1,5 +1,25 @@
 const filterButtons = document.querySelectorAll('.filter-btn');
 const galleryItems = document.querySelectorAll('.gallery-item');
+
+// Lazy-load background images when gallery cards scroll into view
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const imgWrapper = entry.target;
+      const src = imgWrapper.dataset.image;
+      if (src) {
+        imgWrapper.style.backgroundImage =
+          `linear-gradient(135deg, rgba(0,0,0,0.12), rgba(0,0,0,0.32)), url('${src}')`;
+      }
+      observer.unobserve(imgWrapper);
+    }
+  });
+}, { rootMargin: '200px' });
+
+document.querySelectorAll('.gallery-image[data-image]').forEach(el => {
+  imageObserver.observe(el);
+});
+
 const lightbox = document.createElement('div');
 lightbox.className = 'lightbox hidden';
 lightbox.innerHTML = `
@@ -49,10 +69,11 @@ function navigateImage(direction) {
   const item = visibleItems[currentImageIndex];
   const imgWrapper = item.querySelector('.gallery-image');
   const src = imgWrapper.dataset.image || '';
-  const caption = item.querySelector('h3')?.textContent || '';
+  const title = item.querySelector('h3')?.textContent || '';
+  const desc = item.querySelector('.gallery-body p')?.textContent?.trim() || '';
   
   lightboxImage.src = src;
-  lightboxCaption.textContent = caption;
+  lightboxCaption.innerHTML = title + (desc ? `<span class="lightbox-desc">${desc}</span>` : '');
 }
 
 filterButtons.forEach(btn => {
@@ -64,10 +85,11 @@ function openLightbox(index) {
   const item = visibleItems[currentImageIndex];
   const imgWrapper = item.querySelector('.gallery-image');
   const src = imgWrapper.dataset.image || '';
-  const caption = item.querySelector('h3')?.textContent || '';
+  const title = item.querySelector('h3')?.textContent || '';
+  const desc = item.querySelector('.gallery-body p')?.textContent?.trim() || '';
   
   lightboxImage.src = src;
-  lightboxCaption.textContent = caption;
+  lightboxCaption.innerHTML = title + (desc ? `<span class="lightbox-desc">${desc}</span>` : '');
   lightbox.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
 }
