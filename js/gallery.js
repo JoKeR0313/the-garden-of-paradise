@@ -8,13 +8,18 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
       const imgWrapper = entry.target;
       const src = imgWrapper.dataset.image;
       if (src) {
-        imgWrapper.style.backgroundImage =
-          `linear-gradient(135deg, rgba(0,0,0,0.12), rgba(0,0,0,0.32)), url('${src}')`;
+        // Pre-fetch image in the background
+        const img = new Image();
+        img.onload = () => {
+          imgWrapper.style.backgroundImage =
+            `linear-gradient(135deg, rgba(0,0,0,0.12), rgba(0,0,0,0.32)), url('${src}')`;
+        };
+        img.src = src;
       }
       observer.unobserve(imgWrapper);
     }
   });
-}, { rootMargin: '200px' });
+}, { rootMargin: '50px' });
 
 document.querySelectorAll('.gallery-image[data-image]').forEach(el => {
   imageObserver.observe(el);

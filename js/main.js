@@ -67,15 +67,22 @@ if (backToTop) {
   });
 }
 
-// Parallax scrolling effect for hero section
+// Parallax scrolling effect for hero section (throttled)
 const hero = document.querySelector('.hero');
 if (hero) {
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxSpeed = 0.5;
-    
-    if (scrolled < hero.offsetHeight) {
-      hero.style.backgroundPositionY = `${scrolled * parallaxSpeed}px`;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrolled = window.pageYOffset;
+        const parallaxSpeed = 0.5;
+        
+        if (scrolled < hero.offsetHeight) {
+          hero.style.backgroundPositionY = `${scrolled * parallaxSpeed}px`;
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   });
 }
@@ -100,7 +107,7 @@ if ('IntersectionObserver' in window) {
         observer.unobserve(img);
       }
     });
-  });
+  }, { rootMargin: '50px' });
 
   lazyImages.forEach(img => {
     img.classList.add('lazy-placeholder');
