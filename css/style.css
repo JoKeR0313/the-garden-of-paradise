@@ -542,8 +542,12 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) !important;
   max-width: min(90vw, 700px);
+  max-height: 92vh;
   width: 100%;
   padding: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .lightbox-content:hover {
@@ -553,10 +557,13 @@ img {
 
 .lightbox-content img {
   width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: calc(92vh - 80px);
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 10px;
   background: #f0f0f0;
-  min-height: 200px;
   pointer-events: none;
 }
 
