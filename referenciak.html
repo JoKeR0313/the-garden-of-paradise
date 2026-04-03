@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="HU-BU">
+  <meta name="geo.placename" content="Budapest">
   <meta name="description" content="The Garden of Paradise kertépítési referenciák – kertépítés, kertfenntartás és öntözőrendszer projektek képgalériája. Tekintse meg valódi elvégzett munkáinkat Budapestről és környékéről.">
   <title>Kertépítési Referenciák & Képgaléria | The Garden of Paradise Budapest</title>
   <link rel="canonical" href="https://thegardenofparadise.hu/referenciak.html">
@@ -15,12 +18,16 @@
   <meta property="og:title" content="Kertépítési Referenciák & Képgaléria | The Garden of Paradise">
   <meta property="og:description" content="Tekintse meg kertépítési, kertfenntartási és öntözőrendszer referenciáinkat. Valódi elvégzett munkák képgalériája Budapestről és 40 km körzetéből.">
   <meta property="og:image" content="https://thegardenofparadise.hu/images/og-referenciak.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Garden of Paradise | Kerti paradicsom – kertépítési referenciák és képgaléria Budapestről">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kertépítési Referenciák | The Garden of Paradise">
   <meta name="twitter:description" content="Kertépítés, kertfenntartás és öntözőrendszer projektek képgalériája Budapestről és 40 km körzetéből.">
   <meta name="twitter:image" content="https://thegardenofparadise.hu/images/og-referenciak.jpg">
+  <meta name="twitter:image:alt" content="The Garden of Paradise | Kerti paradicsom – kertépítési referenciák képgalériája Budapestről">
 
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
@@ -44,19 +51,58 @@
   }
   </script>
 
+  <!-- Structured Data: AggregateRating & Reviews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandscapeService",
+    "name": "The Garden of Paradise",
+    "url": "https://thegardenofparadise.hu/",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "3",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Katalin"},
+        "reviewBody": "Precíz, gyors és nagyon szép munkát végeztek. Az öntözőrendszer hibátlanul működik."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Balázs"},
+        "reviewBody": "A heti fenntartásnak köszönhetően a kertünk egész évben rendezett. Ajánlom őket."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Dóra"},
+        "reviewBody": "A tervezéstől az átadásig végig segítőkészek voltak, minden kérdésre válaszoltak."
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="images/favicon.svg">
+  <meta name="theme-color" content="#2e7d32">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="topbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">The Garden of Paradise</a>
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="Főnavigáció">
         <a href="index.html">Főoldal</a>
-        <a href="referenciak.html" class="active">Referenciák</a>
+        <a href="referenciak.html" class="active" aria-current="page">Referenciák</a>
         <a href="kapcsolat.html">Kapcsolat</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Menü">
@@ -65,7 +111,7 @@
     </div>
   </header>
 
-  <nav class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Kenyérmorzsaútvonal">
     <div class="container">
       <ul class="breadcrumb-list">
         <li><a href="index.html">Főoldal</a></li>
@@ -86,10 +132,10 @@
     <section class="section">
       <div class="container">
         <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">Összes</button>
-          <button class="filter-btn" data-filter="keptepes">Kertépítés</button>
-          <button class="filter-btn" data-filter="fenntartas">Kertfenntartás</button>
-          <button class="filter-btn" data-filter="ontozo">Öntözőrendszer</button>
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Összes</button>
+          <button class="filter-btn" data-filter="keptepes" aria-pressed="false">Kertépítés</button>
+          <button class="filter-btn" data-filter="fenntartas" aria-pressed="false">Kertfenntartás</button>
+          <button class="filter-btn" data-filter="ontozo" aria-pressed="false">Öntözőrendszer</button>
         </div>
 
         <div class="gallery-grid" id="gallery">
@@ -612,7 +658,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Garden Paradise. Minden jog fenntartva.</div>
+    <div class="footer-bottom">© 2026 The Garden of Paradise. Minden jog fenntartva.</div>
   </footer>
 
   <script src="js/main.js"></script>

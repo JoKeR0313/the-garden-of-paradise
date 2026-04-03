@@ -115,7 +115,7 @@ img {
     url('../images/64033951-stock-vector-tropical-flowers-jungle-leaves-bird-of-paradise-flower-beautiful-seamless-vector-floral-pattern-back.jpg');
   background-size: auto, 400px;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -340,7 +340,7 @@ img {
     url('../images/flowers2.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
   overflow: hidden;
 }
@@ -1008,5 +1008,31 @@ img[loading="lazy"].loaded {
   .hero,
   .page-hero {
     background-attachment: scroll !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--green-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .lazy-placeholder {
+    animation: none;
   }
 }

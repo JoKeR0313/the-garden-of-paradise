@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lépjen kapcsolatba The Garden of Paradise kertészeti vállalkozással. Ingyenes helyszíni felmérés Budapesten és 40 km körzetében. 48 órán belül személyre szabott ajánlattal válaszolunk!">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="HU-BU">
+  <meta name="geo.placename" content="Budapest">
+  <meta name="description" content="Lépjen kapcsolatba The Garden of Paradise kertészeti vállalkozással. Ingyenes helyszíni felmérés Budapesten és 40 km körzetében, valamint igény szerint országszerte is. 48 órán belül személyre szabott ajánlattal válaszolunk!">
   <title>Kapcsolat & Árajánlat | The Garden of Paradise – Kertész Budapest</title>
   <link rel="canonical" href="https://thegardenofparadise.hu/kapcsolat.html">
 
@@ -13,14 +16,18 @@
   <meta property="og:url" content="https://thegardenofparadise.hu/kapcsolat.html">
   <meta property="og:site_name" content="The Garden of Paradise">
   <meta property="og:title" content="Kapcsolat & Árajánlat | The Garden of Paradise – Kertész Budapest">
-  <meta property="og:description" content="Lépjen kapcsolatba kertészeti csapatunkkal. Ingyenes helyszíni felmérés Budapesten és 40 km körzetében. 48 órán belül válaszolunk.">
+  <meta property="og:description" content="Lépjen kapcsolatba kertészeti csapatunkkal. Ingyenes helyszíni felmérés Budapesten és 40 km körzetében, valamint igény szerint országszerte is! 48 órán belül válaszolunk.">
   <meta property="og:image" content="https://thegardenofparadise.hu/images/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Garden of Paradise | Kerti paradicsom – kapcsolat és árajánlatkérés">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kapcsolat & Árajánlat | The Garden of Paradise">
-  <meta name="twitter:description" content="Ingyenes helyszíni felmérés Budapesten és 40 km körzetében. 48 órán belül válaszolunk.">
+  <meta name="twitter:description" content="Ingyenes helyszíni felmérés Budapesten és 40 km körzetében, valamint igény szerint országszerte is! 48 órán belül válaszolunk.">
   <meta name="twitter:image" content="https://thegardenofparadise.hu/images/og-home.jpg">
+  <meta name="twitter:image:alt" content="The Garden of Paradise | Kerti paradicsom – kapcsolat és árajánlatkérés">
 
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
@@ -44,20 +51,39 @@
   }
   </script>
 
+  <!-- Structured Data: ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Kapcsolat \u0026 \u00c1raj\u00e1nlat \u2013 The Garden of Paradise",
+    "url": "https://thegardenofparadise.hu/kapcsolat.html",
+    "mainEntity": {
+      "@type": "LandscapeService",
+      "name": "The Garden of Paradise",
+      "telephone": ["+36-20-289-0919", "+36-30-205-1747"],
+      "email": "gardenofparadise2026@gmail.com",
+      "url": "https://thegardenofparadise.hu/"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="images/favicon.svg">
+  <meta name="theme-color" content="#2e7d32">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="topbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">The Garden of Paradise</a>
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="Főnavigáció">
         <a href="index.html">Főoldal</a>
         <a href="referenciak.html">Referenciák</a>
-        <a href="kapcsolat.html" class="active">Kapcsolat</a>
+        <a href="kapcsolat.html" class="active" aria-current="page">Kapcsolat</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Menü">
         <span></span><span></span><span></span>
@@ -65,7 +91,7 @@
     </div>
   </header>
 
-  <nav class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Kenyérmorzsaútvonal">
     <div class="container">
       <ul class="breadcrumb-list">
         <li><a href="index.html">Főoldal</a></li>
@@ -84,14 +110,14 @@
     </section>
 
     <section class="section contact-section">
-      <div class="container split contact-grid">
+      <div class="container">
         <div class="card contact-info">
           <h2>Elérhetőségek</h2>
           <ul class="info-list">
             <li><strong>Rácz Kristóf:</strong> <a href="tel:+36202890919">06-20-289-0919</a></li>
             <li><strong>Dömötör Miklós:</strong> <a href="tel:+36302051747">06-30-205-1747</a></li>
             <li><strong>Email:</strong> <a href="mailto:gardenofparadise2026@gmail.com">gardenofparadise2026@gmail.com</a></li>
-            <li><strong>Szolgáltatási terület:</strong> Budapest és 40 km körzet</li>
+            <li><strong>Szolgáltatási terület:</strong> Budapest és 40 km körzetében, valamint igény szerint országszerte!</li>
           </ul>
         </div>
       </div>
@@ -127,6 +153,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/form.js"></script>
 </body>
 </html>
